@@ -11,6 +11,6 @@ import java.nio.charset.StandardCharsets;
 public class HashControllers {
     @GetMapping("/md5")
     public String hashWithMd5(@RequestParam String text){
-        return MD5.toHexString(MD5.computeMD5(text.getBytes(StandardCharsets.UTF_8)));
+        return MD5.toHexString(MD5.computeMD5(text.getBytes()));
     }
 }
